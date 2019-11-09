@@ -1,0 +1,18 @@
+def wykres(x,y): #Gotowa funkcja do wytworzenia wykresu
+   import numpy as np 
+   from pylab import plot, show, xticks, yticks, legend, xlabel, ylabel, title
+   title("Wykres temperatury")
+   xlabel("Dni")
+   ylabel("Temperatura")
+   n=input("Wpisz nazwe miasta: ")
+   legend([n])
+   plot(x,y,'-x')
+   xticks(np.arange(1, d+1, 1))
+print("Program do tworzenia wykresu pogodowego")
+tab=[]
+d=int(input("Wprowadz liczbe dni: "))
+for i in range (1,d+1):
+    tab.append(int(input("Wprowadz temperature w {} dniu: ".format(i)))) #Do kazdego elementu z listy (dni), zostaje przypisana przez uzytkownia temperatura
+tabx=list (range(1,d+1))   #Po wpisaniu n liczby dni, program wpisuje je po kolei do listy
+y=tab
+print(wykres(tabx,y)) #wykorzystanie zdefininowanej wcześniej funkcji
